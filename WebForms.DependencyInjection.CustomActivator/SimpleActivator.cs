@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/* This class is taken from this address:
+ * https://gist.github.com/preetikr/ed3953c7f07dfaa6589eae89e0c289a2#file-net472_aspnet_dependencyinjection_step1-cs
+ */
+
+using System;
 using System.Linq;
 using System.Reflection;
-using System.Web;
 using WebForms.DependencyInjection.Services;
 
 namespace WebForms.DependencyInjection.CustomActivator
 {
-
     public class SimpleActivator : IServiceProvider
     {
         public object GetService(Type serviceType)
@@ -30,14 +31,14 @@ namespace WebForms.DependencyInjection.CustomActivator
             }
             else
             {
-                var x = Activator.CreateInstance(
-                serviceType,
-                BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.CreateInstance,
-                null,
-                null,
-                null);
+                var instance = Activator.CreateInstance(
+                    serviceType,
+                    BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.CreateInstance,
+                    null,
+                    null,
+                    null);
 
-                return x;
+                return instance;
             }
         }
     }
