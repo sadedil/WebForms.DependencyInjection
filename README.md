@@ -1,4 +1,5 @@
-# WebForms.DependencyInjection (for ASP.NET Framework 4.7.2)
+# WebForms.DependencyInjection
+## for .NET Framework 4.7.2
 This repo just contains some samples of ASP.NET Web Forms Dependency Injection Support
 
 ---
