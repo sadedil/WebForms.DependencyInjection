@@ -1,4 +1,4 @@
-# WebForms.DependencyInjection
+# ASP.NET WebForms.DependencyInjection
 ## for .NET Framework 4.7.2
 This repo just contains some samples of ASP.NET Web Forms Dependency Injection Support
 
@@ -10,7 +10,7 @@ _This project is at the very beginning stage. Some of these examples are not wor
 
 ---
 
-- [ ] Autofac - Not working (Cannot activate classes has private constructor)
+- [ ] Autofac - Not working (Cannot activate classes which has private constructor)
 - [x] CustomActivator - Working (for experimental purposes only)
 - [x] Ninject - Working
 - [ ] Unity - Not Working (Cannot find a way to support `IServiceProvider`)
